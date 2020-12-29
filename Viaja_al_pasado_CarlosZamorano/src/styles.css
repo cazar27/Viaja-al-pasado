@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    font-family: 'Times new Roman';
+}
+
+.box-shadow {
+    box-shadow: 3px 3px 6px grey!important;
+}
+
+#myCarousel > div > div.carousel-item.active > div > h1 {
+    margin: 20xp;
+    border-radius: 20px;
+    
+}
+
+.btn {
+    -webkit-transition: background 2s;
+    -webkit-transition-timing-function: ease;
+}
+
+small {
+    font-size: 2em;
+}

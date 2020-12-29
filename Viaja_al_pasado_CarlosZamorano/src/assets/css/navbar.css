@@ -1,0 +1,111 @@
+
+.navbar {
+  margin-bottom: 20px;
+  background: lightgrey;
+}
+
+#google_translate_element {
+  position: absolute;
+  z-index: 3;
+}
+
+.nav-link {
+  text-transform: uppercase!important;
+  font-size: 1.4em;
+}
+
+.navbar-dark:hover .navbar-nav:hover .nav-link:hover {
+  color: darkgray;
+  font-weight: bolder;
+}
+
+.logo {
+  width: 45px;
+  height: auto;
+}
+
+.ico {
+  position: absolute;
+  color: black;
+  right: 30px;
+  top: 7px;
+  text-shadow: none;
+}
+
+
+/* para los icons del footer */
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?c11oli');
+  src:  url('fonts/icomoon.eot?c11oli#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?c11oli') format('truetype'),
+    url('fonts/icomoon.woff?c11oli') format('woff'),
+    url('fonts/icomoon.svg?c11oli#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-youtube:before {
+  content: "\ea9d";
+}
+
+body > footer > div > div > div > p > a {
+  color: white!important;
+}
+
+body > footer > div > div > div > p > a:hover {
+  color:rgba(216, 200, 243, 0.8)!important;
+  text-decoration: none;
+}
+
+body > footer > div > div > div > p > a> span {
+  font-size: 2.5em;
+  margin: 0px 30px;
+}
+
+.redes {
+  font-size: 1.8em;
+}
+
+.goog-te-banner-frame {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 767px) {
+
+  body > footer > div > div > div > p > a> span {
+    font-size: 1em;
+    margin: 0px 10px;
+  }
+  
+  .redes {
+    font-size: 1em;
+    text-align: left!important;
+  }
+
+}  

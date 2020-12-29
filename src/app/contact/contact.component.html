@@ -1,0 +1,136 @@
+<div class="imagen-fondo" [hidden]="messageContactForm.submitted" >
+
+<form class="form-signin" #messageContactForm="ngForm">
+  <div class="text-center mb-4">
+    <h1 class="h2 mb-3 font-weight-normal">Enviar Consulta</h1>
+  </div>
+
+  <div class="form-label-group">
+    <input ng-model="mail" type="email" id="mail" name="mail"
+     class="form-control" required minlength="1" autofocus
+     placeholder="{{inputsMessageContact.mail}}"
+     [(ngModel)]="messageContact.mail" #mail="ngModel" >
+    <label for="mail"> Dirección email</label>
+  </div>
+  
+  <div *ngIf="mail.invalid && (mail.dirty || mail.touched)"
+  class="alert alert-danger">
+    <div *ngIf="mail.errors.required">
+      El email es obligatorio.
+    </div>
+    <div *ngIf="mail.errors.email">
+      El email debe ser tipo email. llevar @ ,etc.
+    </div>
+  </div>
+
+  <div class="form-label-group">
+    <input ng-model="name" type="text" id="name" name="name"
+     class="form-control" required minlength="4"
+     placeholder="{{inputsMessageContact.name}}"
+     [(ngModel)]="messageContact.name" #name="ngModel" >
+    <label for="name">Nombre</label>
+  </div>
+
+  <div *ngIf="name.invalid && (name.dirty || name.touched)"
+    class="alert alert-danger">
+
+    <div *ngIf="name.errors.required">
+      El nombre es obligatorio.
+    </div>
+    <div *ngIf="name.errors.minlength">
+      El nombre debe ser minimo de 4 caracteres.
+    </div>
+  </div>
+
+  <div class="form-label-group">
+    <input ng-model="subjet" type="text" id="subjet" name="subjet"
+     class="form-control" required minlength="12"
+     placeholder="{{inputsMessageContact.subjet}}"
+     [(ngModel)]="messageContact.subjet" #subjet="ngModel" >
+    <label for="subjet">Asunto</label>
+  </div>
+
+  <div *ngIf="subjet.invalid && (subjet.dirty || subjet.touched)"
+  class="alert alert-danger">
+    <div *ngIf="subjet.errors.required">
+      El asunto es obligatorio.
+    </div>
+    <div *ngIf="subjet.errors.minlength">
+      El asunto debe tener minimo 12 caracteres.
+    </div>
+  </div>
+
+  <div class="form-label-group">
+    <input ng-model="body" type="text" id="body" name="body"
+     class="form-control" required minlength="40"
+     placeholder="{{inputsMessageContact.body}}"
+     [(ngModel)]="messageContact.body" #body="ngModel" >
+    <label for="body">Mensaje</label>
+  </div>
+
+  <div *ngIf="body.invalid && (body.dirty || body.touched)"
+  class="alert alert-danger">
+    <div *ngIf="body.errors.required">
+      El asunto es obligatorio.
+    </div>
+    <div *ngIf="body.errors.minlength">
+      El asunto debe tener minimo 40 caracteres.
+    </div>
+  </div>
+
+  <div class="checkbox mb-3">
+    <label>
+      <input name="politica" type="checkbox" checked value="politics"
+      [(ngModel)]="messageContact.body" #politica="ngModel"
+      > Acepto la política de privacidad
+    </label>
+  </div>
+  <div *ngIf="politica.invalid && (politica.dirty || politica.touched)"
+  class="alert alert-danger">
+    <div *ngIf="politica.errors.nullValidator">
+      Debe marcar que acepta la politica.
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-lg btn-success btn-block"
+  [disabled]="messageContactForm.invalid">Enviar Mensaje</button>
+  <button type="button" class="btn btn-lg btn-danger btn-block"
+  (click)="messageContactForm.resetForm({})">Resetear Formulario</button>
+
+  <div id="telefono">
+      <p><a href="https://api.whatsapp.com/send?phone=+34658429263">Enviar Mensaje de What's app <i class="fa fa-phone"></i></a></p>
+    </div>
+    <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>
+    
+  </form>
+</div>
+
+<div class="submitted-message container" *ngIf="messageContactForm.submitted">
+  <br><br><br>
+    <h2>Su mensaje fue enviado con exito</h2>
+  <div class="row">
+    <div class="col-12">
+    <p>Su Email</p>
+    </div>
+    <div class="col-12">
+      <p>{{ messageContactForm.value.mail }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12"><p>Su Nombre</p></div>
+    <div class="col-12"><p>{{ messageContactForm.value.name }}</p></div>
+  </div>
+  <div class="row">
+    <div class="col-12"><p>Su Asunto</p></div>
+    <div class="col-12"><p>{{ messageContactForm.value.subjet }}</p></div>
+  </div>
+  <div class="row">
+    <div class="col-12"><p>Su Mensaje</p></div>
+    <div class="col-12"><p>{{ messageContactForm.value.body }}</p></div>
+  </div>
+  <br>
+  <div class="botones">
+  <button class="btn btn-primary btn-lg" routerLink="/contacte">Calcelar Envio</button>
+  <button class="btn btn-primary btn-lg" routerLink="/inicio">Volver al Inicio</button>
+  </div>
+</div>

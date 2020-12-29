@@ -1,0 +1,40 @@
+
+footer {
+  padding-top: 20px;
+  background:lightgrey;
+  color: #747374!important;
+}
+
+a:hover {
+  color: #525252!important;
+  text-decoration: none;
+}
+
+i {
+  font-size: 2em;
+  margin: 0px 37px;
+}
+
+.redes {
+  
+  font-size: 1.4em;
+}
+
+.goog-te-banner-frame {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 767px) {
+
+  i {
+    font-size: 1em;
+    margin: 0px 10px;
+  }
+  
+  .redes {
+    color: white;
+    font-size: 1em;
+    text-align: left!important;
+  }
+
+}  

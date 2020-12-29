@@ -1,0 +1,76 @@
+#cabecera{
+    width: 100%;
+    height: auto;
+}
+#video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: -99;
+    visibility: visible;
+}
+.video-container{
+    color:#000000;
+    text-shadow: 2px 2px 4px #333;
+    text-align: center;
+    margin-top: 300px;
+}
+
+.oscurecer {
+    z-index: 100;
+    background:#d3d3d3;
+    opacity: 0.8;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.modal {
+    position: absolute;
+    background: none;
+    margin: 50px 25%;
+    padding: 30px;
+    width: 50%;
+    border-radius: 15px;
+    z-index: 50;
+}
+
+.hiddem {
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 800px){
+    
+    .video-container{
+        margin-top: 500px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    
+    .video-container{
+        margin-top: 500px;
+    }
+}
+
+.ico {
+    position: absolute;
+    color: black;
+    right: 30px;
+    top: 7px;
+    text-shadow: none;
+}  
+
+.btn-light {
+    width: 100%!important;
+}
+
+@media only screen and (max-width: 800px){
+
+    .video-container{
+        margin-top: 300px;
+    }
+
+}

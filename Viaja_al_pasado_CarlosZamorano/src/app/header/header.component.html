@@ -1,0 +1,81 @@
+<div id="google_translate_element"></div><script type="text/javascript">
+  function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en,fi,fr,ko', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+  }
+  </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<header id="cabecera">
+    
+    <video id="video" loop autoplay preload muted poster="http://carloszamorano.es/viaja_al_pasado/img/poster.png">
+        
+        <source src="http://carloszamorano.es/viaja_al_pasado/img/video.mp4" type='video/mp4; codecs="avc1,mp4a"' />
+        <source src="http://carloszamorano.es/viaja_al_pasado/img/videoplayback.webm" type='video/webm; codecs="vp8,vorbis"' />
+        Tu navegador no soporta videos HTML5
+    </video>
+    
+    <div class="container video-container">
+        <div class="oscurecer">
+            <h1>{{ title | uppercase }}</h1>
+            <h2>Ven a disfrutar de una magnífica estancia</h2> 
+            <div class="container">
+            
+            <div class="form-row">   
+            <div class="form-group col-md-4">
+                <i class="material-icons ico">date_range</i>
+                    <input type="text" class="form-control" name="llegada" placeholder="Llegada" id="from" name="from">
+                </div>
+                <div class="form-group col-md-4">
+                <i class="material-icons ico">date_range</i>
+                    <input type="text" class="form-control" name="salida" placeholder="Salida" id="to" name="to">
+                </div>
+                
+                <div class="form-group col-md-2">
+                    <i class="material-icons md-24 ico">face</i>
+                    <select name="people" class="form-control" id="people" >
+                    <option class="form-control" value="1">1 Persona</option>
+                    <option class="form-control" value="2">2 Personas</option>
+                    <option class="form-control" value="3">3 Personas</option>
+                    <option class="form-control" value="4">4 Personas</option>
+                    </select>
+                </div>
+                
+                <div class="form-group col-md-2">
+                    <button (click)="changeClass()" class="btn btn-light">
+                    <!-- data-toggle="modal" data-target="#myModal" -->
+                    Consultar</button>
+                </div>
+
+            </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div>
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+    <div class="modal-content">
+    
+        <!-- Modal Header -->
+        <div class="modal-header">
+        <h4 class="modal-title">Confirmar reserva</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+        <p>Para finalizar su reserva proporcionenos su correo electronico, Por favor.</p>
+        <input type="email" class="form-control">
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal">Confirmar</button>
+        </div>
+        
+    </div>
+    </div>
+    </div>
+
+</div>
+      

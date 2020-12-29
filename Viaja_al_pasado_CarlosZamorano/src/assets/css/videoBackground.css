@@ -1,0 +1,43 @@
+#cabecera{
+    width: 100%;
+    height: auto;
+}
+#video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: -99;
+    visibility: visible;
+}
+.video-container{
+    color:white;
+    text-shadow: 4px 4px 4px #333;
+    text-align: center;
+    margin-top: 220px;
+}
+
+.oscurecer {
+    z-index: -98;
+    background: rgba(86, 61, 124, 0.8);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 800px){
+    
+    .video-container{
+        margin-top: 0px;
+    }
+    .main-content {
+        margin-top: 0px;
+    }
+}
+
+.main-content {
+    background: white;
+    margin-top: 250px;
+    padding-top:50px;
+}

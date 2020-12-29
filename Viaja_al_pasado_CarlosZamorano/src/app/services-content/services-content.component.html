@@ -1,0 +1,42 @@
+<div class="container">
+<div id="menu">
+    <h2>{{title}}</h2>
+    <p>{{description}}</p>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label (click)="cambiar(1)" class="btn btn-secondary">
+        <input type="radio" name="price" id="price" autocomplete="off"> Precio
+      </label>
+      <label (click)="cambiar(2)" class="btn btn-secondary">
+        <input  type="radio"  name="likes" id="likes" autocomplete="off"> Popularidad
+      </label>
+    </div>
+    
+  </div>
+</div>
+
+<div class="album py-5 bg-light">
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-12" *ngFor="let servicio of servicios | ordenar: opcion" >
+        <div class="card box-shadow">
+          <img class="card-img-top" alt="{{servicio.name}}" style="height: 225px; width: 100%; display: block;" src="{{servicio.img[0]}}" data-holder-rendered="true">
+          <div class="card-body">
+            <h2 class="featurette-heading">{{servicio.name}}.</h2>
+            <p *ngFor="let p of servicio.description | slice :0 :1" class="card-text">{{p}}</p>
+            
+            <div class="justify-content-between align-items-center">
+              <p class="likes">{{servicio.likes}}</p>
+              <small class="text-muted">Desde {{servicio.price}} €</small>
+
+              <a routerLink="/servicios/{{servicio.id}}" class="btn btn-default col-12">Más información >></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+  
+    </div>
+  </div>
+  </div>

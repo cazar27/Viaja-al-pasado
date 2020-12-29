@@ -1,0 +1,35 @@
+.card {
+    min-height: 320px;
+} 
+
+.section-title {
+    text-align: center;
+}
+
+.goog-te-banner-frame {
+    visibility: hidden;
+}
+
+#telefono {
+    margin: 15px;
+    font-size: 1.4em;
+}
+
+.text-card {
+    font-size: 120%!important;
+}
+
+.btn {
+    -webkit-transition: background 1s!important;
+    -webkit-transition-timing-function: ease!important;
+}
+
+h2.title{
+    font-size: 4em;
+}
+
+@media only screen and (max-width: 400px){
+    h2.title {
+        font-size: 2em;
+    }
+}        
